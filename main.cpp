@@ -6,6 +6,9 @@ DigitalOut led2(LED2);
 #elif defined(TARGET_NUMAKER_PFM_M453)
 DigitalOut led1(LED1);
 DigitalOut led2(LED2);
+#elif defined(TARGET_NUMAKER_PFM_M487)
+DigitalOut led1(LED1);
+DigitalOut led2(LED2);
 #endif
 
 void led2_thread(void const *args) {
