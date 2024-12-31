@@ -8,7 +8,7 @@ void led2_thread(DigitalOut *led) {
     while (true) {
         *led = !*led;
 #if MBED_MAJOR_VERSION >= 6
-        ThisThread::sleep_for(1000);
+        ThisThread::sleep_for(1000ms);
 #else
         Thread::wait(1000);
 #endif
@@ -27,7 +27,7 @@ int main() {
     while (true) {
         led1 = !led1;
 #if MBED_MAJOR_VERSION >= 6
-        ThisThread::sleep_for(500);
+        ThisThread::sleep_for(500ms);
 #else
         Thread::wait(500);
 #endif
